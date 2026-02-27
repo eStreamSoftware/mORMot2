@@ -1,0 +1,44 @@
+package mormot2ui;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'mORMot 2 framework VCL Components'}
+{$LIBSUFFIX AUTO}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  vcl,
+  mormot2;
+
+contains
+  mormot.ui.controls in '..\..\src\ui\mormot.ui.controls.pas',
+  mormot.ui.core in '..\..\src\ui\mormot.ui.core.pas',
+  mormot.ui.gdiplus in '..\..\src\ui\mormot.ui.gdiplus.pas',
+  mormot.ui.grid.orm in '..\..\src\ui\mormot.ui.grid.orm.pas',
+  mormot.ui.pdf in '..\..\src\ui\mormot.ui.pdf.pas';
+
+end.

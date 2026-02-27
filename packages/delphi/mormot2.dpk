@@ -1,0 +1,128 @@
+package mormot2;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'mORMot 2 ORM/SOA/MVC framework'}
+{$LIBSUFFIX AUTO}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  dbrtl;
+
+contains
+  mormot.core.base in '..\..\src\core\mormot.core.base.pas',
+  mormot.core.buffers in '..\..\src\core\mormot.core.buffers.pas',
+  mormot.core.collections in '..\..\src\core\mormot.core.collections.pas',
+  mormot.core.data in '..\..\src\core\mormot.core.data.pas',
+  mormot.core.datetime in '..\..\src\core\mormot.core.datetime.pas',
+  mormot.core.interfaces in '..\..\src\core\mormot.core.interfaces.pas',
+  mormot.core.json in '..\..\src\core\mormot.core.json.pas',
+  mormot.core.log in '..\..\src\core\mormot.core.log.pas',
+  mormot.core.mustache in '..\..\src\core\mormot.core.mustache.pas',
+  mormot.core.mvc in '..\..\src\core\mormot.core.mvc.pas',
+  mormot.core.os in '..\..\src\core\mormot.core.os.pas',
+  mormot.core.os.security in '..\..\src\core\mormot.core.os.security.pas',
+  mormot.core.perf in '..\..\src\core\mormot.core.perf.pas',
+  mormot.core.rtti in '..\..\src\core\mormot.core.rtti.pas',
+  mormot.core.search in '..\..\src\core\mormot.core.search.pas',
+  mormot.core.test in '..\..\src\core\mormot.core.test.pas',
+  mormot.core.text in '..\..\src\core\mormot.core.text.pas',
+  mormot.core.threads in '..\..\src\core\mormot.core.threads.pas',
+  mormot.core.unicode in '..\..\src\core\mormot.core.unicode.pas',
+  mormot.core.variants in '..\..\src\core\mormot.core.variants.pas',
+  mormot.core.zip in '..\..\src\core\mormot.core.zip.pas',
+  mormot.net.acme in '..\..\src\net\mormot.net.acme.pas',
+  mormot.net.async in '..\..\src\net\mormot.net.async.pas',
+  mormot.net.client in '..\..\src\net\mormot.net.client.pas',
+  mormot.net.dns in '..\..\src\net\mormot.net.dns.pas',
+  mormot.net.http in '..\..\src\net\mormot.net.http.pas',
+  mormot.net.ldap in '..\..\src\net\mormot.net.ldap.pas',
+  mormot.net.relay in '..\..\src\net\mormot.net.relay.pas',
+  mormot.net.rtsphttp in '..\..\src\net\mormot.net.rtsphttp.pas',
+  mormot.net.server in '..\..\src\net\mormot.net.server.pas',
+  mormot.net.sock in '..\..\src\net\mormot.net.sock.pas',
+  mormot.net.ws.async in '..\..\src\net\mormot.net.ws.async.pas',
+  mormot.net.ws.client in '..\..\src\net\mormot.net.ws.client.pas',
+  mormot.net.ws.core in '..\..\src\net\mormot.net.ws.core.pas',
+  mormot.net.ws.server in '..\..\src\net\mormot.net.ws.server.pas',
+  mormot.crypt.core in '..\..\src\crypt\mormot.crypt.core.pas',
+  mormot.crypt.ecc in '..\..\src\crypt\mormot.crypt.ecc.pas',
+  mormot.crypt.ecc256r1 in '..\..\src\crypt\mormot.crypt.ecc256r1.pas',
+  mormot.crypt.jwt in '..\..\src\crypt\mormot.crypt.jwt.pas',
+  mormot.crypt.openssl in '..\..\src\crypt\mormot.crypt.openssl.pas',
+  mormot.crypt.other in '..\..\src\crypt\mormot.crypt.other.pas',
+  mormot.crypt.rsa in '..\..\src\crypt\mormot.crypt.rsa.pas',
+  mormot.crypt.secure in '..\..\src\crypt\mormot.crypt.secure.pas',
+  mormot.crypt.x509 in '..\..\src\crypt\mormot.crypt.x509.pas',
+  mormot.soa.client in '..\..\src\soa\mormot.soa.client.pas',
+  mormot.soa.codegen in '..\..\src\soa\mormot.soa.codegen.pas',
+  mormot.soa.core in '..\..\src\soa\mormot.soa.core.pas',
+  mormot.soa.server in '..\..\src\soa\mormot.soa.server.pas',
+  mormot.rest.client in '..\..\src\rest\mormot.rest.client.pas',
+  mormot.rest.core in '..\..\src\rest\mormot.rest.core.pas',
+  mormot.rest.http.client in '..\..\src\rest\mormot.rest.http.client.pas',
+  mormot.rest.http.server in '..\..\src\rest\mormot.rest.http.server.pas',
+  mormot.rest.memserver in '..\..\src\rest\mormot.rest.memserver.pas',
+  mormot.rest.mvc in '..\..\src\rest\mormot.rest.mvc.pas',
+  mormot.rest.server in '..\..\src\rest\mormot.rest.server.pas',
+  mormot.rest.sqlite3 in '..\..\src\rest\mormot.rest.sqlite3.pas',
+  mormot.db.core in '..\..\src\db\mormot.db.core.pas',
+  mormot.db.proxy in '..\..\src\db\mormot.db.proxy.pas',
+  mormot.db.rad in '..\..\src\db\mormot.db.rad.pas',
+  mormot.db.rad.ui.orm in '..\..\src\db\mormot.db.rad.ui.orm.pas',
+  mormot.db.rad.ui in '..\..\src\db\mormot.db.rad.ui.pas',
+  mormot.db.rad.ui.sql in '..\..\src\db\mormot.db.rad.ui.sql.pas',
+  mormot.db.raw.odbc in '..\..\src\db\mormot.db.raw.odbc.pas',
+  mormot.db.raw.oledb in '..\..\src\db\mormot.db.raw.oledb.pas',
+  mormot.db.raw.sqlite3 in '..\..\src\db\mormot.db.raw.sqlite3.pas',
+  mormot.db.sql in '..\..\src\db\mormot.db.sql.pas',
+  mormot.db.sql.odbc in '..\..\src\db\mormot.db.sql.odbc.pas',
+  mormot.db.sql.oledb in '..\..\src\db\mormot.db.sql.oledb.pas',
+  mormot.db.sql.sqlite3 in '..\..\src\db\mormot.db.sql.sqlite3.pas',
+  mormot.db.raw.sqlite3.static in '..\..\src\db\mormot.db.raw.sqlite3.static.pas',
+  mormot.orm.base in '..\..\src\orm\mormot.orm.base.pas',
+  mormot.orm.client in '..\..\src\orm\mormot.orm.client.pas',
+  mormot.orm.core in '..\..\src\orm\mormot.orm.core.pas',
+  mormot.orm.rest in '..\..\src\orm\mormot.orm.rest.pas',
+  mormot.orm.server in '..\..\src\orm\mormot.orm.server.pas',
+  mormot.orm.sql in '..\..\src\orm\mormot.orm.sql.pas',
+  mormot.orm.sqlite3 in '..\..\src\orm\mormot.orm.sqlite3.pas',
+  mormot.orm.storage in '..\..\src\orm\mormot.orm.storage.pas',
+  mormot.lib.curl in '..\..\src\lib\mormot.lib.curl.pas',
+  mormot.lib.gdiplus in '..\..\src\lib\mormot.lib.gdiplus.pas',
+  mormot.lib.gssapi in '..\..\src\lib\mormot.lib.gssapi.pas',
+  mormot.lib.lizard in '..\..\src\lib\mormot.lib.lizard.pas',
+  mormot.lib.openssl11 in '..\..\src\lib\mormot.lib.openssl11.pas',
+  mormot.lib.quickjs in '..\..\src\lib\mormot.lib.quickjs.pas',
+  mormot.lib.sspi in '..\..\src\lib\mormot.lib.sspi.pas',
+  mormot.lib.static in '..\..\src\lib\mormot.lib.static.pas',
+  mormot.lib.uniscribe in '..\..\src\lib\mormot.lib.uniscribe.pas',
+  mormot.lib.win7zip in '..\..\src\lib\mormot.lib.win7zip.pas',
+  mormot.lib.winhttp in '..\..\src\lib\mormot.lib.winhttp.pas',
+  mormot.lib.z in '..\..\src\lib\mormot.lib.z.pas';
+
+end.
